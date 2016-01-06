@@ -536,7 +536,8 @@ body {
    ========================================================================== */
 
 #nav {
-	position: relative;
+	position: fixed;
+	width: 100%;
 	background: #fff;
 	z-index: 70;
 	transition: all ease-out 0.4s;
@@ -567,7 +568,7 @@ body {
 			display: block;
 			line-height: 2em;
 			font-weight: 800;
-			color: $color-gray-25;
+			color: $color-primary-default;
 			overflow: hidden;
 			text-overflow: ellipsis;
 			white-space: nowrap;
@@ -832,10 +833,17 @@ body {
 	}
 }
 
+main.content {
+	padding-top: 60px;
+}
+
 
 /* ==========================================================================
    Header
    ========================================================================== */
+header#header {
+	padding-top: 300px;
+}
 
 #header {
 	position: relative;
