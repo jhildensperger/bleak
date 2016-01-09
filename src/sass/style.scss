@@ -9,8 +9,8 @@ $breakpoint-phone:		30em;
 $breakpoint-tablet:		50em;
 $breakpoint-desktop:	70em;
 
-$color-green-85: #00669B;
-$color-green-72: #52A2C1;
+$color-blue-dark: #00669B;
+$color-blue-light: #52A2C1;
 
 $color-yellow-100:	#FFC336;
 
@@ -28,8 +28,8 @@ $color-gray-15: #1F2026;
 	backgrounds or as background color for light and dark text color
 */
 
-$color-primary-default:		$color-green-85; /* Light */
-$color-primary-active:		$color-green-72; /* Dark */
+$color-primary-default:		$color-blue-dark;
+$color-primary-active:		$color-blue-light; 
 
 
 /* ==========================================================================
@@ -538,7 +538,7 @@ body {
 #nav {
 	position: fixed;
 	width: 100%;
-	background: #fff;
+	background: $color-primary-default;
 	z-index: 70;
 	transition: all ease-out 0.4s;
 	transform: translate3d(0,0,0);
@@ -568,7 +568,7 @@ body {
 			display: block;
 			line-height: 2em;
 			font-weight: 800;
-			color: $color-primary-default;
+			color: #fff;
 			overflow: hidden;
 			text-overflow: ellipsis;
 			white-space: nowrap;
@@ -601,6 +601,15 @@ body {
 			
 			i:before {
 				margin: auto;
+			}
+
+			i {
+				color: #fff;
+
+				&:hover,
+				&:focus {
+					color: $color-primary-default;
+				}
 			}
 		}
 
